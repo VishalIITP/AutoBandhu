@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <numeric>     // std::accumulate
+#include <numeric>// std::accumulate
 #include <queue>
 #include <array>
-#include <stdexcept>   // std::invalid_argument
-#include <algorithm>   // std::max
+#include <stdexcept>// std::invalid_argument
+#include <algorithm>// std::max
 
 // Forward declaration of Stand
 class Stand;
@@ -86,7 +86,7 @@ public:
         }
 
         auto group = passengerQueue.front(); passengerQueue.pop();
-        Auto* a = autoQueue.front();           autoQueue.pop();
+        Auto* a = autoQueue.front(); autoQueue.pop();
 
         a->setAvailable(false);
         a->setRoute(route, fares);
@@ -104,7 +104,7 @@ public:
     }
 };
 
-// Implement Auto methods that need Stand definition
+// Implementing Auto methods that need Stand definition
 Stand* Auto::targetStand() const {
     return route.empty() ? nullptr : route.back();
 }
